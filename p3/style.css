@@ -1,0 +1,91 @@
+*{
+font-family: 'Raleway', sans-serif;
+}
+
+.row{
+
+    display: flex;
+
+}
+.col-1{
+    width: 15%;
+}
+
+.col-2{
+    width: 20%;
+}
+
+.col-3{
+    width: 50%;
+}
+
+.col-4{
+    width: 15%;
+}
+
+svg{
+    height: 60px;
+    width: 60px;
+}
+
+figure{
+    position: relative;
+    top: 100px;
+}
+
+.udacity{
+    clear: both;
+    width: 30%;
+    height: 0px;
+}
+
+.udacity > img{
+    width: 150%;
+}
+
+h1{
+    text-align: right;
+}
+
+h4{
+    text-align: right;
+}
+
+.laiwan > img{
+    margin-top: 1%;
+    width: 100%;
+}
+
+.lai_wan{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.cat01 > img{
+    width: 100%;
+    float: left;
+}
+
+.cat02 > img{
+    width: 100%;
+}
+
+.cat03 > img{
+    width: 100%;
+}
+
+dd{
+    -webkit-margin-start: 0;
+}
+
+h2{
+    margin: 0;
+    text-align: center;
+}
+
+dd > p{
+    text-align: center;
+    margin: 0;
+}
+
