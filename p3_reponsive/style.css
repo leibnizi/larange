@@ -1,0 +1,138 @@
+*{
+font-family: 'Raleway', sans-serif;
+}
+
+.row{
+
+    display: flex;
+
+}
+.col-1{
+    width: 15%;
+}
+
+.col-2{
+    width: 20%;
+}
+
+.col-3{
+    width: 50%;
+}
+
+.col-4{
+    width: 15%;
+}
+
+rect{
+    width: 60px;
+    height: 60px;
+}
+
+svg{
+    height: 60px;
+    width: 60px;
+    margin: 0;
+}
+
+figure{
+    position: relative;
+    top: 20%;
+    left: -20%;
+}
+
+.udacity{
+    clear: both;
+    width: 40%;
+    height: 0px;
+}
+
+.udacity > img{
+    width: 150%;
+}
+
+h1{
+    text-align: right;
+    font-size: 4vw;
+}
+
+h4{
+    text-align: right;
+    font-size: 1vw;
+}
+
+.laiwan > img{
+    margin-top: 1%;
+    width: 100%;
+}
+
+.lai_wan{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cat01 > img{
+    width: 100%;
+}
+
+.cat02 > img{
+    width: 100%;
+}
+
+.cat03 > img{
+    width: 100%;
+}
+
+dd{
+    -webkit-margin-start: 0;
+}
+
+h2{
+    margin: 0;
+    text-align: center;
+}
+
+dd > p{
+    text-align: center;
+    margin: 0;
+    font-size: 0.1vw;
+}
+
+dd > h4{
+    margin: 0;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.col-2 > figcaption{
+    font-size: 1vw;
+}
+
+.cat01{
+    width: 30%;
+}
+.cat02{
+    width: 30%;
+}
+.cat03{
+    width: 30%;
+}
+
+.lai_wan > p{
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 700px){
+    rect{
+        width: 30px;
+        height: 30px;
+    }
+
+    svg{
+        height: 30px;
+        width: 30px;
+        margin: 0;
+    }
+    figcaption{
+        font-size: 1px;
+    }
+}
