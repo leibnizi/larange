@@ -1,0 +1,170 @@
+* {
+    font-family: 'Raleway', sans-serif, Roboto;
+    box-sizing: border-box
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container_header {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header_inner {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header_inner > img {
+    display: inline-block;
+    max-width: 40%;
+
+}
+
+.header_title {
+    font-size: 4vw;
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    margin: 0;
+}
+
+.header_word {
+    font-size: 1vw;
+    text-align: right;
+    margin: 0;
+}
+
+.laiwan {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+
+}
+
+.laiwan > img {
+    width: 100%;
+}
+
+.article {
+    font-size: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+svg {
+    vertical-align: top;
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.blue > svg > rect {
+    width: 100%;
+    height: 100%;
+    fill: #02b3e4;
+}
+
+.black > svg > rect {
+    width: 100%;
+    height: 100%;
+    fill: #2d3c49;
+}
+
+.gray > svg > rect {
+    width: 100%;
+    height: 100%;
+    fill: #7d97ad;
+}
+
+figure {
+    height: 20%;
+}
+
+figcaption {
+    font-size: 5px;
+}
+
+.aside {
+    width: 20%;
+    vertical-align: top;
+    margin-top: -5%;
+    float: left;
+}
+
+.footer {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lai_wan {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cat01{
+    width: 30%;
+}
+
+.cat02{
+    width: 30%;
+}
+
+.cat03{
+    width: 30%;
+}
+
+.cat01 > img {
+    width: 100%;
+    height: auto;
+
+}
+
+.cat02 > img {
+    width: 100%;
+    height: auto;
+
+}
+
+.cat03 > img {
+    width: 100%;
+    height: auto;
+
+}
+dd {
+    -webkit-margin-start: 0;
+}
+
+dd > h4 {
+    margin: 0;
+    font-size: 2vw;
+    text-align: center;
+}
+
+dd > p {
+    margin: 0;
+    font-size: 1vw;
+    text-align: center;
+}
+
+@media screen and (min-width: 650px) {
+    figcaption {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    figure {
+        margin-left: 20px;
+    }
+}
