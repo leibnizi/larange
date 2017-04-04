@@ -45,9 +45,8 @@ textarea {
 .blog-new > p {
     position: fixed;
     color: #bfbfbf;
-    top: 40px;
-    margin-left: 1%;
-    margin-top: 2%;
+    top: 36px;
+    margin-left: 0.3%;
 }
 
 .fresh {
@@ -75,10 +74,16 @@ textarea {
     top: -35px;
 }
 
+.fork {
+    position: relative;
+    left: 200px;
+    top: -15px;
+}
+
 time {
     position: relative;
     top: -37px;
-    right: 18%;
+    right: 20%;
     color: rgba(128, 128, 128, 0.84);
     font-size: 10px;
 }
@@ -154,4 +159,8 @@ time {
     color: white;
     vertical-align: sub;
 
+}
+
+.delete {
+    display: none;
 }

@@ -31,7 +31,8 @@ var blogTemplate = function(blog) {
     var t = `
     <div class="lei-blog-cell">
         <img src="img/hang.jpg" alt="face">
-        <p>leibniz</p>
+        <span class="fork" onclick="this.parentElement.innerHTML=''">删除</span>
+        <p>leibniz</p>     
         <div class="">
             <a class="blog-title" href="#" data-id="${id}"></a>
         </div>
@@ -69,6 +70,18 @@ var blogTemplate = function(blog) {
     return t
 }
 
+var bindEvent = function(element, eventName, callback) {
+    element.addEventListener(eventName, callback)
+}
+
+var bindAll = function(selector, eventName, callback) {
+    var elements = document.querySelectorAll(selector)
+    for(var i = 0; i < elements.length; i++) {
+        var e = elements[i]
+        bindEvent(e, eventName, callback)
+    }
+}
+
 var insertBlogAll = function(blogs) {
     var html = ''
     for (var i = 0; i < blogs.length; i++) {
@@ -89,8 +102,17 @@ var blogAll = function() {
         callback: function(response) {
             console.log('响应', response)
             var blogs = JSON.parse(response)
-            window.blogs = blogs
+            window.blogs = blogs.reverse()
             insertBlogAll(blogs)
+            // log('insert')
+            // var elements = document.querySelectorAll('.fork')
+            // for(var i = 0; i < elements.length; i++) {
+            //     var el = elements[i]
+            //     bindEvent(el, 'click', function () {
+            //         el.parentElement.classList.add('delete')
+            //         log('delete click', el)
+            //     })
+            // }
         }
     }
     ajax(request)
@@ -147,6 +169,7 @@ var bindEventBlogAdd = function () {
         }
         // 用这个数据调用 blogNew 来创建一篇新博客
         blogNew(form)
+        blogAll()
         swal(
             '恭喜',
             '博客发表成功',
@@ -179,4 +202,9 @@ var __main = function() {
 
 __main()
 
+var removeFa = function () {
+    var el = e('.fork')
+    el.parentElement.classList.add('delete')
+    log('delete click', el)
+}
 

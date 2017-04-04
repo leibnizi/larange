@@ -8,27 +8,27 @@
         <link rel="stylesheet" href="https://limonte.github.io/sweetalert2/dist/sweetalert2.min.css">
     </head>
     <body>
-    <div class="top">
-        <div>
-            <h2>发微博</h2>
-            <span>leibnizi</span>
+        <div class="top">
+            <div>
+                <h2>发微博</h2>
+                <span>leibnizi</span>
+            </div>
+            <button class="left">取消</button>
+            <button id='id-button-submit' class="lei-auto-submit"
+                    data-method="POST"
+                    data-path="/api/blog/add"
+                    data-response="blogAddBlock"
+            >发送</button>
         </div>
-        <button class="left">取消</button>
-        <button id='id-button-submit' class="lei-auto-submit"
-                data-method="POST"
-                data-path="/api/blog/add"
-                data-response="blogAddBlock"
-        >发送</button>
-    </div>
-    <div class="blog-new lei-auto-form">
-        <p id="fresh">分享新鲜事...</p>
-        <label>
-            <textarea id='id-input-content' type="text"></textarea>
-        </label>
-        <br>
-    </div>
-    <div class="lei-blogs">
-    </div>
+        <div class="blog-new lei-auto-form">
+            <p id="fresh">分享新鲜事...</p>
+            <label>
+                <textarea id='id-input-content' type="text"></textarea>
+            </label>
+            <br>
+        </div>
+        <div class="lei-blogs">
+        </div>
+    </body>
     <script src="js/blogMain.js"></script>
-</body>
 </html>
