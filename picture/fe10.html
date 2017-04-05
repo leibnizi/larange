@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src=wen.js></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- 轮播图 -->
+        <div class="wen-3">
+            <!-- data-imgs 是图片的总数 -->
+            <!-- data-active 是当前显示的图片的下标 -->
+            <div class="wen-slide" data-imgs=5 data-active=0>
+                <img id=id-wenimage-0 class="wen-slide-image wen-active" src="slideimages/1.jpg" alt="">
+                <img id=id-wenimage-1 class=wen-slide-image src="slideimages/2.jpg" alt="">
+                <img id=id-wenimage-2 class=wen-slide-image src="slideimages/3.jpg" alt="">
+                <img id=id-wenimage-3 class=wen-slide-image src="slideimages/4.jpg" alt="">
+                <img id=id-wenimage-4 class=wen-slide-image src="slideimages/5.jpg" alt="">
+                <p class="wen-slide-button wen-left wen-vertical-center" data-next="-1"><</p>
+                <p class="wen-slide-button wen-right wen-vertical-center" data-next="1">></p>
+                <div class="wen-slide-indicators">
+                    <div data-key='#id-wenimage-0' id=id-indi-0 class="wen-slide-indi wen-white"></div>
+                    <div data-key='#id-wenimage-1' id=id-indi-1 class="wen-slide-indi"></div>
+                    <div data-key='#id-wenimage-2' id=id-indi-2 class="wen-slide-indi"></div>
+                    <div data-key='#id-wenimage-3' id=id-indi-3 class="wen-slide-indi"></div>
+                    <div data-key='#id-wenimage-4' id=id-indi-4 class="wen-slide-indi"></div>
+                </div>
+            </div>
+        </div>
+        <script src=3.js></script>
+    </body>
+</html>
