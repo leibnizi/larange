@@ -1,0 +1,65 @@
+img {
+	width: 40px;
+	height: 30px;
+	vertical-align: middle;
+}
+
+audio {
+	vertical-align: middle;
+}
+
+#menu {
+	opacity: 0.4;
+	margin-left: 50px;
+}
+
+.play-list {
+	position: absolute;
+	top: -133px;
+	left: 470px;
+	width: 400px;
+	border: 1px black solid;
+	box-shadow: -2px -2px 2px #888888;
+
+}
+
+.view {
+	display: none;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+}
+
+svg {
+	display: inline;
+	margin-left: 300px;
+}
+
+use.view {
+	display: none;
+}
+
+.play-list-song {
+	display: flex;
+}
+
+.grid-1 {
+	flex: 0 0 50%;
+}
+
+.grid-2 {
+	flex: 0 0 30%;
+}
+
+.grid-3 {
+	flex: 0 0 20%;
+}
+
+.step-1 {
+	border: 1px black solid;
+	height: 60px;
+	margin: 0 auto;
+	border-radius: 10px;
+}
