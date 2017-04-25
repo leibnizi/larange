@@ -1,3 +1,16 @@
+.h {
+	background-color: rgba(33, 28, 28, 0.51);
+}
+
+#bright {
+	background-color: white;
+    width: 150px;
+    height: 50px;
+    position: relative;
+    top: 700px;
+    right: 5px;
+}
+
 img {
 	width: 40px;
 	height: 30px;
@@ -62,4 +75,16 @@ use.view {
 	height: 60px;
 	margin: 0 auto;
 	border-radius: 10px;
+}
+
+#pi {
+	width: 40%;
+    height: 40%;
+    top: 450px;
+    position: relative;
+    left: 150px;
+}
+
+.view {
+	display: none;
 }

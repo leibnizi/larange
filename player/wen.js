@@ -2,6 +2,10 @@ var e = function(selector) {
     return document.querySelector(selector)
 }
 
+var log = function() {
+    console.log.apply(console, arguments)
+}
+
 var songs = [
     '1.mp3',
     '2.mp3',
@@ -18,17 +22,18 @@ window.onload = function() {
     player.play()
 }
 
+//  播放 暂停
 var play = e('.player-play')
 play.addEventListener('click', function(){
     if (play.classList.contains('pause')) {
         player.pause()
         play.classList.remove('pause')
-        e('img:nth-child(3)').src = "img/暂停.png"
+        e('img:nth-child(3)').src = "img/播放.png"
     }
     else {
         player.play()
         play.classList.add('pause')
-        e('img:nth-child(3)').src = "img/播放.png"
+        e('img:nth-child(3)').src = "img/暂停.png"
     }
 
 })
@@ -51,16 +56,17 @@ var playList = e('.play-list')
 var path = function() {
     playList.addEventListener('click', function(event){
         var target = event.target
-        if (target.classList.contains('play-list-song')) {
-            var song = target.dataset.path
+        // if (target.classList.contains('play-list-song')) {
+            var song = target.parentElement.dataset.path
             player.src = song
             currentSongIndex = songs.indexOf(song)
-            console.log(currentSongIndex)
-        }
+            log(currentSongIndex)
+        // }
         player.play()
     })
 }
 
+// 切换播放模式
 var play_svg = function() {
     var target = e('.svg')
     var target1 = e('use:nth-child(1)')
@@ -85,6 +91,7 @@ var play_svg = function() {
     })
 }
 
+// 单曲循环
 var single = function() {
     var singleClass = e('.play_single')
     player.addEventListener('ended', function(){
@@ -96,6 +103,7 @@ var single = function() {
     })
 }
 
+ // 顺序播放
 var loop = function() {
     var currentSongIndex = songs.indexOf(player.src.slice(-5))
     var loopClass = e('.play_loop')
@@ -110,6 +118,7 @@ var loop = function() {
     })
 }
 
+//  随机播放
 var randmo = function() {
     var randomClass = e('.play_random')
     player.addEventListener('ended', function(){
@@ -127,6 +136,7 @@ var randmo = function() {
 
 }
 
+// 根据播放模式上一首
 var play_up = function() {
     var up = e('.player-up')
     var randomClass = e('.play_random')
@@ -136,17 +146,19 @@ var play_up = function() {
             var song = songs[index]
             player.src = song
             player.play()
+            log(player.src.slice(-5))
         }
         else {
             currentSongIndex = (4 + currentSongIndex) % songs.length
             var song = songs[currentSongIndex]
             player.src = song
-            console.log(currentSongIndex)
+            log(player.src.slice(-5))
             player.play()
         }
     })
 }
 
+// 根据播放模式下一首
 var play_down = function() {
     var down = e('.player-down')
     var randomClass = e('.play_random')
@@ -156,13 +168,13 @@ var play_down = function() {
             var song = songs[index]
             player.src = song
             player.play()
-            console.log('down')
+            log(player.src.slice(-5))
         }
         else {
             currentSongIndex = (currentSongIndex + 1) % songs.length
             var song = songs[currentSongIndex]
             player.src = song
-            console.log(currentSongIndex)
+            log(player.src.slice(-5))
             player.play()
         }
     })
@@ -176,10 +188,23 @@ var toggleClass = function(element, className) {
     }
 }
 
+// 开关列表
 var menu = function() {
     var menu1 = e('#menu')
     menu1.addEventListener('click', function() {
         toggleClass(playList, 'view')
+    })
+}
+
+// 首页画面
+var fresh = function() {
+    var pi = e('#pi')
+    var h = e('.h')
+    var bright = e('#bright')
+    pi.addEventListener('click', function() {
+        pi.classList.add('view')
+        bright.classList.add('view')
+        h.classList.remove('h')
     })
 }
 
@@ -191,3 +216,4 @@ loop()
 randmo()
 play_up()
 play_down()
+fresh()
